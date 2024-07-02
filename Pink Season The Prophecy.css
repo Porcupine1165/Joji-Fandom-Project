@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, #f09ce4, #dd16a5);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; 
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,); 
+    z-index: 1000; 
+    padding: 10px 10%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.album-info {
+    text-align: center;
+    margin: 20px 0;
+    width: 80%; 
+}
+
+.album-info img {
+    width: 300px;
+    height: auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 20px 0; 
+}
+
+.album-info h1 {
+    font-size: 3em;
+    color: white;
+    margin: 20px 0; 
+}
+
+.album-info h2 {
+    font-size: 1.5em;
+    color: white;
+    margin: 10px 0; 
+}
+
+.song-list {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left; 
+}
+
+.song-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.song-list th, .song-list td {
+    padding: 10px;
+    text-align: center; 
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+.song-list th {
+    background-color: #e31f1f;
+    color: white;
+}
+
+.song-list tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+    }
+
+    nav ul li {
+        margin: 0 10px; 
+    }
+
+    .album-info {
+        width: 90%; 
+    }
+
+    .song-list {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .album-info h1 {
+        font-size: 2em;
+    }
+
+    .album-info h2 {
+        font-size: 1.2em;
+    }
+
+    .footer {
+        font-size: 9px; 
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin: 0 5px; 
+    }
+
+    .album-info h1 {
+        font-size: 1.5em; 
+    }
+
+    .album-info h2 {
+        font-size: 1em; 
+    }
+
+    .song-list {
+        padding: 10px; 
+    }
+
+    .footer {
+        font-size: 8px; 
+    }
+}

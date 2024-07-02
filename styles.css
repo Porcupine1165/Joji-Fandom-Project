@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('Front.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 10px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(11, 11, 11);
+    position: fixed;
+    width: 85%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: 50vh;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.header-text h1 span {
+    color: red;
+}
+
+.footer {
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+#joji {
+    padding: 80px 0;
+    background-image: url('joji-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col1 {
+    flex-basis: 35%;
+}
+
+.col1 img {
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.col2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    color: red;
+}
+
+.joji-tab-titles {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.joji-tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.joji-tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.joji-tab-links:hover::after,
+.joji-tab-links.active-link::after {
+    width: 100%;
+}
+
+.joji-tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.joji-tab-contents ul li span {
+    color: red;
+    font-size: 14px;
+}
+
+.joji-tab-contents {
+    display: none;
+}
+
+.joji-tab-contents.active-tab {
+    display: block;
+}
+
+#pinkguy {
+    padding: 80px 0;
+    background-color: rgb(224, 108, 186);
+    background-size: cover;
+    background-position: center;
+}
+
+.raw {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subtitle2 {
+    color: rgb(140, 16, 132);
+}
+
+.pinkguy-tab-titles {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.pinkguy-tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.pinkguy-tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(140, 16, 132);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.pinkguy-tab-links:hover::after,
+.pinkguy-tab-links.active-link::after {
+    width: 100%;
+}
+
+.pinkguy-tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.pinkguy-tab-contents ul li span {
+    color: rgb(140, 16, 132);
+    font-size: 14px;
+}
+
+.pinkguy-tab-contents {
+    display: none;
+}
+
+.pinkguy-tab-contents.active-tab {
+    display: block;
+}
+
+#service {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div b {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.social-media-container {
+    background: rgba(38, 38, 38, 0.7); 
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+
+.social-media-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-media-container a {
+    margin-right: 10px;
+}
+
+.social-media-container a:last-child {
+    margin-right: 0;
+}
+
+.social-media-container a:hover {
+    color: red;
+}
+
+.social-media-container u {
+    color: red;
+}
+
+.social-media-container u:hover {
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    nav {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-text {
+        margin-bottom: 20vh;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    .row,
+    .raw {
+        flex-direction: column;
+    }
+
+    .col1,
+    .col2 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px 2%;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .joji-tab-links,
+    .pinkguy-tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #00eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('joji-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('joji-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+.container {
+    padding: 10px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(0,0,0);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0,);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+nav ul li {
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+    margin: auto;
+    height: 100%;
+}
+
+.container1 .card {
+    position: relative;
+    flex: 1 1 45%;
+    max-width: 45%;
+    height: 220px;
+    background-color: rgb(111, 106, 106);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.container1 .card:hover {
+    height: 500px;
+}
+
+.container1 .card .image {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    height: 260px;
+    top: -60px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.container1 .card .image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.container1 .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.container1 .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+.content h1 {
+    color: #00eeff;
+}
+
+.footer {
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+@media (max-width: 1200px) {
+    .container1 .card {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 10px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 2%;
+    }
+
+    .container1 {
+        padding: 30px 2%;
+    }
+
+    .container1 .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .container1 .card .image {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        padding: 5px 5%;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .container1 {
+        padding: 20px 2%;
+    }
+
+    .footer {
+        font-size: 8px;
+        padding: 10px;
+    }
+}
